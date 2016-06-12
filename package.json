@@ -1,0 +1,14 @@
+{
+  "name": "spo-pi-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Atanas Yanchevski",
+  "license": "ISC",
+  "dependencies": {
+    "mathjs": "^3.2.1"
+  }
+}
