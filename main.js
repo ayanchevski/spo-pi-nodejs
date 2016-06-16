@@ -1,6 +1,7 @@
 var cluster = require('cluster');
 var math = require('mathjs').create({ number: 'BigNumber', precision: 1000 });
 var fs = require('fs');
+var defaultTasks = require('os').cpus().length;
 
 const START_TIME = +new Date();
 const getCommandLineParameter = (param, defaultValue) => {
@@ -11,7 +12,7 @@ const getCommandLineParameter = (param, defaultValue) => {
 	}
 }
 const precision = getCommandLineParameter('-p', 1000);
-const tasks = getCommandLineParameter('-t', 4);
+const tasks = getCommandLineParameter('-t', defaultTasks);
 const quiet = getCommandLineParameter('-q', false);
 const resultFile = getCommandLineParameter('-f', 'result.txt');
 const NUMBER_OF_WORKERS = Math.min(tasks, precision);
